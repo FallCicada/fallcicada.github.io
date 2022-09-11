@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>CD Ripping Experience Share - FallCicada&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="FallCicada&#039;s Blog"><meta name="msapplication-TileImage" content="/img/kaltsit_sticker.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="FallCicada&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="As a game soundtrack collector and one who often listen to those music on CDs, it’s almost impossible to keep replacing CD from CD drive every an hour while listening. From the perspective of convenie"><meta property="og:type" content="article"><meta property="og:title" content="CD Ripping Experience Share"><meta property="og:url" content="https://fallcicada.github.io/2022/09/11/cd-rip/"><meta property="og:site_name" content="FallCicada&#039;s Blog"><meta property="og:description" content="As a game soundtrack collector and one who often listen to those music on CDs, it’s almost impossible to keep replacing CD from CD drive every an hour while listening. From the perspective of convenie"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://fallcicada.github.io/img/cd_rip_eac_setting_1.png"><meta property="og:image" content="https://fallcicada.github.io/img/cd_rip_eac_setting_2.png"><meta property="og:image" content="https://fallcicada.github.io/img/cd_rip_eac_ui_1.png"><meta property="og:image" content="https://fallcicada.github.io/img/cd_rip_cue_encoding_vscode_1.png"><meta property="og:image" content="https://fallcicada.github.io/img/cd_rip_cue_encoding_vscode_2.png"><meta property="article:published_time" content="2022-09-11T00:49:59.000Z"><meta property="article:modified_time" content="2022-09-11T05:43:58.000Z"><meta property="article:author" content="FallCicada"><meta property="article:tag" content="Music"><meta property="article:tag" content="Technical"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://fallcicada.github.io/img/cd_rip_eac_setting_1.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://fallcicada.github.io/2022/09/11/cd-rip/"},"headline":"CD Ripping Experience Share","image":["https://fallcicada.github.io/img/cd_rip_eac_setting_1.png","https://fallcicada.github.io/img/cd_rip_eac_setting_2.png","https://fallcicada.github.io/img/cd_rip_eac_ui_1.png","https://fallcicada.github.io/img/cd_rip_cue_encoding_vscode_1.png","https://fallcicada.github.io/img/cd_rip_cue_encoding_vscode_2.png"],"datePublished":"2022-09-11T00:49:59.000Z","dateModified":"2022-09-11T05:43:58.000Z","author":{"@type":"Person","name":"FallCicada"},"publisher":{"@type":"Organization","name":"FallCicada's Blog","logo":{"@type":"ImageObject","url":"https://fallcicada.github.io/img/kaltsit_sticker.png"}},"description":"As a game soundtrack collector and one who often listen to those music on CDs, it’s almost impossible to keep replacing CD from CD drive every an hour while listening. From the perspective of convenie"}</script><link rel="canonical" href="https://fallcicada.github.io/2022/09/11/cd-rip/"><link rel="icon" href="/img/kaltsit_sticker.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css"><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const $tabMenu = document.querySelector(`a[href="${location.hash}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(location.hash);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/kaltsit_sticker.png" alt="FallCicada&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="My GitHub" href="https://github.com/FallCicada"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-9-desktop is-9-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2022-09-11T00:49:59.000Z" title="9/11/2022, 12:49:59 AM">2022-09-10</time></span><span class="level-item">Updated&nbsp;<time dateTime="2022-09-11T05:43:58.000Z" title="9/11/2022, 5:43:58 AM">2022-09-10</time></span><span class="level-item"><a class="link-muted" href="/categories/Miscellaneous/">Miscellaneous</a></span></div></div><h1 class="title is-3 is-size-4-mobile">CD Ripping Experience Share</h1><div class="content"><p>As a game soundtrack collector and one who often listen to those music on CDs, it’s almost impossible to keep replacing CD from CD drive every an hour while listening.
+From the perspective of convenience in either music listening, management, storing, or sharing, it is really necessary to rip music from those CDs.</p>
+<p>This is a personal note for my CD ripping experience.
+I think it is worth of a post, at least the equipments which cost me several hundreds of dollars are worth of it (laugh).</p>
+<span id="more"></span>
+
+<h2 id="Preparation-for-CD-Ripping"><a href="#Preparation-for-CD-Ripping" class="headerlink" title="Preparation for CD Ripping"></a>Preparation for CD Ripping</h2><h3 id="Equipments"><a href="#Equipments" class="headerlink" title="Equipments"></a>Equipments</h3><p>To start with CD ripping, you should at least have a CD drive, undoubtedly.
+My personal equipments for CD ripping is somewhat bottommost hardware, considering I am just a newbie in CD ripping:</p>
+<ul>
+<li><em>Gotega</em> External DVD Drive, USB 3.0 Portable CD/DVD</li>
+<li><em>Epson</em> Perfection V39 Scanner</li>
+</ul>
+<p>During the ripping, I felt these following are also quite necessary:</p>
+<ul>
+<li>Disposable latex gloves</li>
+<li>Screen cleaner spray or wipes</li>
+<li>Normal wet wipes</li>
+</ul>
+<p>These really helps prevent grease or dirt adhering to the CD, booklet, or the screen of the scanner.
+Afterall, nobody likes some fingerprints to present on the scan of the CD and the booklet.
+Wearing a latex glove on one hand really helps to prevent this, or just wash your hands carefully with plenty of hand soups before CD ripping and scanning.</p>
+<h3 id="Software"><a href="#Software" class="headerlink" title="Software"></a>Software</h3><p>The most important software, which rips music from CD, is EAC.
+The following of this article assumes using EAC v1.6.
+Installing EAC is a seemingly long and complicated procedure.
+Keep in mind that you need musics with best quality, and choose the corresponding configuration during the installation helps reduce most of the problems.</p>
+<p>After installation, go to <code>EAC - EAC options</code>, set both of the following to high:</p>
+<ul>
+<li><code>Extraction - Extraction and compression priority</code> </li>
+<li><code>Extraction - Error recovery quality</code></li>
+</ul>
+<p>And check the box in</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> <code>Tools - Automatically write status report after extraction</code></li>
+<li><input checked="" disabled="" type="checkbox"> <code>Tools - Append checksum to status report</code></li>
+</ul>
+<div style="padding:5px 5% 10px 5%;width:100%;overflow:hidden;">
+  <img src="/img/cd_rip_eac_setting_1.png" style="width:48%;margin-right:4%;" title="EAC option - Extraction"
+  ><img src="/img/cd_rip_eac_setting_2.png" style="width:48%;" title="EAC option - Tools">
+</div>
+
+<p>For a detailed installation guide, click <a target="_blank" rel="noopener" href="https://github.com/neteroster/blog/blob/main/%E6%8A%80%E6%9C%AF%E5%90%91/self-cd-rip.md">here</a> (sadly this guide is only available in Chinese).</p>
+<p>As for the scanner, simply install the driver and softward provided by its brand, because the software of scanner among different brands also differs much.</p>
+<h2 id="CD-Ripping"><a href="#CD-Ripping" class="headerlink" title="CD Ripping"></a>CD Ripping</h2><h3 id="Ripping-Procedure"><a href="#Ripping-Procedure" class="headerlink" title="Ripping Procedure"></a>Ripping Procedure</h3><p>For CD ripping, I roughly split it into multiple steps:</p>
+<ol>
+<li>Open EAC, insert the disc, and the music information will appear in the window.</li>
+<li>If necessary, click on second icon from the right (which is on the right side of <code>Eject</code> button) to search for CD information from database.
+It is possible to switch from different databases by clicking the select box next to the CD icon.
+If you decide to manually enter the CD information after ripping (for example, when detailed information is provided in the booklet of CD), you might skip this step.<div style="padding:5px 30% 0px 30%;width:100%;overflow:hidden;">
+  <img src="/img/cd_rip_eac_ui_1.png" style="width:100%;" title="EAC - Search for CD Information from Database">
+</div></li>
+<li>Click on <code>Action - Detect Gaps</code>, wait until gap detection finishes.</li>
+<li>Click on <code>Action - Test &amp; Copy Image &amp; Create CUE Sheet</code>, choose whatever of compressed (flac) or uncompressed (wav) based on your preference.
+Then choose a path of saving the ripped file, wait until ripping finished.</li>
+<li>Check the ripping log and listen to the audio to ensure no problem happens.
+Then you have a ripped CD!
+Remember to put your CD back to the box.</li>
+</ol>
+<h3 id="After-Ripping"><a href="#After-Ripping" class="headerlink" title="After Ripping"></a>After Ripping</h3><p>There are, actually, some post-works to be done.
+These works are often ignored and I have seen quite frequently that someone shared their CD with a CUE sheet in unknown encodings which caused inconvenience.</p>
+<ol>
+<li>Open your CUE sheet (the file ending with <code>.cue</code> suffix) with an appropriate editor, like <a target="_blank" rel="noopener" href="https://code.visualstudio.com/">VSCode</a> or some other ones that supports you change the encoding of file.</li>
+<li>Check the encoding of your CUE sheet.
+In VSCode, it is at the bottom of the window.
+If your CUE sheet seems to contain a lot of corrupted characters, it is very probably that you opened the file in a wrong format.
+It everything seems to be OK, jump to step 4.</li>
+<li>Click on the encoding, select <code>Reopen with Encoding</code>, then select the first encoding which has a <code>Guessed from content</code> after it.
+Re-check if the CUE sheet looks OK with the new encoding.
+If problem still exists, check the following encodings, which are common in my personal experience:<ul>
+<li><code>Simplified Chinese (GB 2312)</code></li>
+<li><code>Japanese (Shift JIS)</code></li>
+<li><code>Simplified Chinese (GBK)</code></li>
+<li><code>UTF-16 LE</code></li>
+<li><code>UTF-16 BE</code></li>
+</ul>
+</li>
+<li>If the encoding of your CUE sheet is not in <code>UTF-8</code>, click on the encoding, select <code>Save with encoding</code>, then select <code>UTF-8</code> to save your file in appropriate encoding format.<div style="padding:5px 5% 10px 5%;width:100%;overflow:hidden;">
+  <img src="/img/cd_rip_cue_encoding_vscode_1.png" style="width:43%;margin-right:3%;" title="VSCode - Check CUE File Encoding"
+  ><img src="/img/cd_rip_cue_encoding_vscode_2.png" style="width:54%;" title="VSCode - Reopen CUE File with Encoding">
+</div></li>
+<li>Do this again to your log file.</li>
+<li>If you wish to share the CD in online platform, remove the personal information, like anonymize your file save path, in your log file.</li>
+</ol>
+<p>If you are not satisfied with the CD information found on the online databases, you can manually enter the information in your CUE sheet.
+The format of CUE sheet can be found <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Cue_sheet_(computing)"><strong>here</strong></a>.
+My personal practice of CUE sheet formatting is to make a CUE sheet like this:</p>
+<figure class="highlight plaintext"><figcaption><span>Some Album DISC 1.cue</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">REM DATE 2022/09/10</span><br><span class="line">REM DISCID xxxxxxxx</span><br><span class="line">PERFORMER &quot;Some Brand&quot;</span><br><span class="line">TITLE &quot;Some Album DISC 1&quot;</span><br><span class="line">FILE &quot;Some Album DISC 1.wav&quot; WAVE</span><br><span class="line">  TRACK 01 AUDIO</span><br><span class="line">    TITLE &quot;Some Song&quot;</span><br><span class="line">    PERFORMER &quot;Some Singer&quot;</span><br><span class="line">    INDEX 01 00:00:00</span><br><span class="line">  TRACK 02 AUDIO</span><br><span class="line">    TITLE &quot;Some Other Song&quot;</span><br><span class="line">    PERFORMER &quot;Some Other Singer&quot;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>Where I mainly removed the remark of EAC version, and edit performer if it does not correspond to what appears on the booklet.
+I’m also used to name the audio file to <code>&#123;ALBUM_NAME&#125; DISC &#123;DISC_NUMBER&#125;.wav</code>, even if the album only have 1 disc.</p>
+<p>After all these long steps, you finally have a fully prepared ripped CD.
+Now put it to your music player, and enjoy it!</p>
+<h2 id="Scanning"><a href="#Scanning" class="headerlink" title="Scanning"></a>Scanning</h2><p>To be finished.</p>
+<h2 id="CD-Management-and-Archiving"><a href="#CD-Management-and-Archiving" class="headerlink" title="CD Management and Archiving"></a>CD Management and Archiving</h2><p>To be finished.</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>CD Ripping Experience Share</p><p><a href="https://fallcicada.github.io/2022/09/11/cd-rip/">https://fallcicada.github.io/2022/09/11/cd-rip/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>FallCicada</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2022-09-10</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2022-09-10</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Music/">Music</a><a class="link-muted mr-2" rel="tag" href="/tags/Technical/">Technical</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2022/09/11/music-record/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Music Record - ACG OST</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2022/09/10/misc-note/"><span class="level-item">Miscellaneous Notes</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-3-tablet is-3-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/img/kaltsit_sticker.png" alt="FallCicada"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">FallCicada</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Los Angeles, CA</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">5</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">2</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">7</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/FallCicada" target="_blank" rel="noopener">Follow</a></div></div></div><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">Catalogue</h3><ul class="menu-list"><li><a class="level is-mobile" href="#Preparation-for-CD-Ripping"><span class="level-left"><span class="level-item">1</span><span class="level-item">Preparation for CD Ripping</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Equipments"><span class="level-left"><span class="level-item">1.1</span><span class="level-item">Equipments</span></span></a></li><li><a class="level is-mobile" href="#Software"><span class="level-left"><span class="level-item">1.2</span><span class="level-item">Software</span></span></a></li></ul></li><li><a class="level is-mobile" href="#CD-Ripping"><span class="level-left"><span class="level-item">2</span><span class="level-item">CD Ripping</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Ripping-Procedure"><span class="level-left"><span class="level-item">2.1</span><span class="level-item">Ripping Procedure</span></span></a></li><li><a class="level is-mobile" href="#After-Ripping"><span class="level-left"><span class="level-item">2.2</span><span class="level-item">After Ripping</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Scanning"><span class="level-left"><span class="level-item">3</span><span class="level-item">Scanning</span></span></a></li><li><a class="level is-mobile" href="#CD-Management-and-Archiving"><span class="level-left"><span class="level-item">4</span><span class="level-item">CD Management and Archiving</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-09-11T05:55:36.824Z">2022-09-10</time></p><p class="title"><a href="/2022/09/11/music-record/">Music Record - ACG OST</a></p><p class="categories"><a href="/categories/Music/">Music</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-09-11T00:49:59.000Z">2022-09-10</time></p><p class="title"><a href="/2022/09/11/cd-rip/">CD Ripping Experience Share</a></p><p class="categories"><a href="/categories/Miscellaneous/">Miscellaneous</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-09-10T01:54:05.000Z">2022-09-09</time></p><p class="title"><a href="/2022/09/10/misc-note/">Miscellaneous Notes</a></p><p class="categories"><a href="/categories/Miscellaneous/">Miscellaneous</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-09-10T00:12:42.603Z">2022-09-09</time></p><p class="title"><a href="/2022/09/10/blog-writing-notes/">Blog Writing Notes</a></p><p class="categories"><a href="/categories/Miscellaneous/">Miscellaneous</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-09-06T03:32:41.053Z">2022-09-05</time></p><p class="title"><a href="/2022/09/06/hello-world/">Hello World</a></p><p class="categories"><a href="/categories/Miscellaneous/">Miscellaneous</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/09/"><span class="level-start"><span class="level-item">September 2022</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/ACG/"><span class="tag">ACG</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Miscellaneous/"><span class="tag">Miscellaneous</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Music/"><span class="tag">Music</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Notes/"><span class="tag">Notes</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/OST/"><span class="tag">OST</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Record/"><span class="tag">Record</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Technical/"><span class="tag">Technical</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/kaltsit_sticker.png" alt="FallCicada&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2022 FallCicada</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="My GitHub" href="https://github.com/FallCicada"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mhchem.min.js" defer></script><script>window.addEventListener("load", function() {
+            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
+                renderMathInElement(element);
+            });
+        });</script><div id="outdated"><h6>Your browser is out-of-date!</h6><p>Update your browser to view this website correctly.&amp;npsb;<a id="btnUpdateBrowser" target="_blank" rel="noopener" href="http://outdatedbrowser.com/">Update my browser now </a></p><p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">×</a></p></div><script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script><script>window.addEventListener("load", function () {
+            outdatedBrowser({
+                bgColor: '#f25648',
+                color: '#ffffff',
+                lowerThan: 'object-fit' // display on IE11 or below
+            });
+        });</script><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
