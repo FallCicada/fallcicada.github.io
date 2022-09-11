@@ -5,6 +5,8 @@ tags:
   - Miscellaneous
   - Notes
 toc: true
+date: 2022-09-08 00:00:00
+updated: 2022-09-08 00:00:00
 ---
 
 This is some notes during my blog-writing procedure.
