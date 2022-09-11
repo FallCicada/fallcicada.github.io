@@ -4,6 +4,8 @@ categories: Miscellaneous
 tags:
   - Miscellaneous
   - Notes
+date: 2022-09-09 18:54:05
+updated: 2022-09-10 17:47:50
 toc: true
 ---
 
@@ -13,6 +15,7 @@ This is a personal notes that keeps track of all procedure, problems, tricks, et
 Hopes it will help someone, at least me, when I'd like to migrate to another blog or unfortunately I have to re-build my blog.
 
 <!-- more -->
+
 
 ## Building Notes
 
@@ -32,7 +35,6 @@ npm install -g hexo-cli
 ```
 
 
-
 ## Initialize a Blog Repository
 
 Following the [hexo official guide](https://hexo.io/docs/setup), run
@@ -43,10 +45,7 @@ cd <folder>
 npm install
 ```
 
-Personally, I put my blog folder in `~/blog/`, which is put in github repo `hexo-blog`.
-
-**TODO:** I am planning to use *Github Action* with hexo to publish my blog automatically on site `fallcicada.github.io`.
-
+Personally, I put my blog folder just in `~/fallcicada.github.io/`, which is put in github repo `fallcicada.github.io`.
 
 
 ## Customization in Blog
@@ -104,6 +103,8 @@ As for Icarus-specific config, I removed a lot of unnecessary component, as note
 Additionally, the logo, or any other image that needs to be placed in the website template, should be put in directory `<icarus directory>/source/img/xxx`, and be indexed as `/img/xxx` in config file.
 The directory of Icarus, installed directly through `npm`, should be `<blog directory>/node_modules/hexo-theme-icarus`.
 
+But there exists some bugs when the blog is deployed with Github Action.
+As a result, I manually moved Icarus from `<blog directory>/node_modules/hexo-theme-icarus` to `<blog directory>/themes/icarus`, which resolves most of the issues.
 
 ``` yaml _config.icarus.yml >folded
 # Modified config
@@ -192,17 +193,23 @@ I am simply using VSCode + Markdown to write my blog.
 That's the easiest but most effecient way for me.
 
 
-
 ## Deploying Blog
 
+I used [Github Action](https://docs.github.com/en/actions) to deploy my blog automatically after pushed to the main branch of my [**Github repo**](https://github.com/FallCicada/fallcicada.github.io).
+The **raw contents** of my blog is pushed to the `main` branch of the repo, except the `public/` folder not uploaded.
+An additional file `.github/workflows/pages.yml` is needed which describes what to do under what situation for Github Action.
+I used an almost the same file as [this](https://hexo.io/docs/github-pages) provided by hexo, except for the version of `Node.js`.
 
-
+The above content is completely sufficient for automatic deploy of hexo blog.
+For more detailed introduction of how Github Action works, refer to [here](https://docs.github.com/en/actions/learn-github-actions).
 
 
 ## TODO
 
 - [More styles](https://www.imaegoo.com/2020/icarus-with-bulma/)
-- I plan to add some stickers to my blog. It is worth to try to find a way like pattern matching and replacing to save the time of manually adding stickers in in-line form in my blog.
+- Keep a note of my first CD ripping experience.
+- Upload most of my undergraduate course materials to Github.
+- Planning to add some stickers to my blog. It is worth to try to find a way like pattern matching and replacing to save the time of manually adding stickers in in-line form in my blog.
 - Move my personal note from local onto the blog might be a good choice.
-- Also planning to share some of my music records, especially those in foobar2000, as I recently found a great way to backup my musics.
-- No other plans? I think the above plans are enough for a short-term workload lol.
+- Keep a diary, or weekly diary? Something like that might not be a bad choice.
+- No other plans? I think the above plans are enough for a short-term workload, lol.
