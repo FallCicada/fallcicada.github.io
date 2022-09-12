@@ -43,7 +43,7 @@ highlight:
 index_generator:
   path: ''
   per_page: 10
-  order_by: '-date'
+  order_by: '-updated'
 default_category: uncategorized
 category_map: null
 tag_map: null

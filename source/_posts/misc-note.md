@@ -5,7 +5,7 @@ tags:
   - Miscellaneous
   - Notes
 date: 2022-09-09 18:54:05
-updated: 2022-09-10 17:47:50
+updated: 2022-09-11 19:26:35
 toc: true
 ---
 
@@ -52,11 +52,12 @@ Personally, I put my blog folder just in `~/fallcicada.github.io/`, which is put
 
 As often mentioned in Chinese SNS, ***the end of customization is the default***.
 I do not want to put much focus on the customization part of the blog.
-Except for a clean hexo theme [**Icarus**](https://github.com/ppoffice/hexo-theme-icarus), I only uses a few additional plugins which are essential in building my blog, currently only including [hexo-pdf](https://github.com/superalsrk/hexo-pdf/).
+Except for a clean hexo theme [**Icarus**](https://github.com/ppoffice/hexo-theme-icarus), I made a few changes to my blog, mainly about the format of blogs.
 
 ### Hexo Theme **Icarus**
 
-To install hexo theme [**Icarus**](https://github.com/ppoffice/hexo-theme-icarus), follow its [Readme](https://github.com/ppoffice/hexo-theme-icarus/blob/master/README.md) or its [guide](https://ppoffice.github.io/hexo-theme-icarus/). Some possible dependencies should also be installed together.
+To install hexo theme [**Icarus**](https://github.com/ppoffice/hexo-theme-icarus), follow its [Readme](https://github.com/ppoffice/hexo-theme-icarus/blob/master/README.md) or its [guide](https://ppoffice.github.io/hexo-theme-icarus/).
+Some possible dependencies should also be installed together.
 
 ``` bash
 npm install -S hexo-theme-icarus hexo-renderer-inferno
@@ -66,7 +67,8 @@ hexo config theme icarus
 This will automatically modify your `_config.yml`, and will also create another theme-specific configuration file `_config.icarus.yml` at the same directory.
 Unlisted configuration is kept the same as default.
 
-The `highlight` config should be carefully checked, as I have met several bugs due to inappropriate settings under this part.
+To order the posts by newest-updated, rather than newest-posted, I changed `index_generator.order_by` to `-updated`.
+In addition, the `highlight` config should be carefully checked, as I have met several bugs due to inappropriate settings under this part.
 To ensure that 2 enters break a line rather than 1 enter, set `marked.gfm: true` in the config file, as in [回车就是换行和预览不一致异常问题](https://github.com/hexojs/hexo/issues/2200).
 
 ``` yaml _config.yml >folded
@@ -82,6 +84,8 @@ author: FallCicada
 language: en
 timezone: America/Los_Angeles
 url: 'https://fallcicada.github.io/'
+index_generator:
+  order_by: '-updated'
 highlight:
   enable: true
   line_number: true
@@ -173,18 +177,83 @@ Personally, I modified the `<icarus_directory>/layout/layout.jsx` and `<icarus_d
 As Icarus uses the [**12 columns system**](https://bulma.io/documentation/columns/sizes/#12-columns-system) of [**bulma**](https://bulma.io/), the total width of the same type needs sum up to 12.
 For example, the modification above makes the width of widget column and content column in double-column desktop mode from 4:8 to 3:9.
 
-### Additional Plugins
+### Fonts
 
-Currently I am only installing hexo plugin [hexo-pdf](https://github.com/superalsrk/hexo-pdf/) for rendering my CV, which could be installed by `npm install --save hexo-pdf`.
-It supports both external links and relative file path with the pdf file placed locally.
-Note that when referring to a local pdf file, the root directory for its path is the same as the root directory of the markdown file.
-For example, the following formats are all valid:
+The style sheets for Icarus theme are available at `themes/icarus/include/style/`.
+To change the font, modify the `$family-sans-serif` and `$family-code` in `base.styl`.
+To change the font size of the articles, refer to `article.styl` and `codeblock.styl`.
 
+I have only made a few changes to the font size, which are listed below:
+
+```diff themes/icarus/include/style/article.styl
+- $article-font-size ?= 1.1rem
++ $article-font-size ?= 1.0rem
+
+  pre
+-     font-size: .85em
++     font-size: .95em
+
+  code
++     font-size: .95em
+      padding: 0
+      background: transparent
+      overflow-wrap: break-word
 ```
-{% pdf https://blablabla/test.pdf %}
-{% pdf https://drive.google.com/file/d/xxxx/preview %}
-{% pdf /<path>/test.pdf %}
+
+```diff themes/icarus/include/style/codeblock.styl
+  figcaption
+      margin: 0 !important
+      padding: .3em 0em .3em .75em
+      font-style: normal
+-     font-size: .8em
++     font-size: 1.0em
 ```
+
+### Custom Sticker Helper Functions
+
+(Note: the following 2 lines are deliberately left here.)
+
+Test{% emoji tb_insidious %}.
+
+It works{% emoji tb_comic %}{% emoji tb_comic %}!
+
+To start with, the code for these emojis are just `{% emoji EMOJI_NAME %}`.
+To modify the theme (or, in other words, hexo) so that one can use [hexo tags](https://hexo.io/api/tag) to add emojis conveniently to blog, you need to create an extra javascript file to register new tags to hexo.
+
+Although not mentioned in the doc of [API of Tag](https://hexo.io/api/tag), according to [API of Helper](https://hexo.io/api/helper), it is suggested that such javascript files should be placed at `scripts/` or `themes/<theme_name>/scripts/`.
+I created a new file, `themes/icarus/scripts/emoji.js`, and write the following content to it:
+
+```javascript themes/icarus/scripts/emoji.js
+const logger = require('hexo-log')();
+
+module.exports = hexo => {
+    logger.info('=== Registering custom tag function of emoji ===');
+    hexo.extend.tag.register('emoji', function(args){
+        var emoji_path = args[0];
+        if (emoji_path.indexOf('.') <= 0) {
+            emoji_path = emoji_path + '.png'
+        }
+        return '<img class="not-gallery-item" src="/emoji/' + emoji_path + '">';
+    });
+};
+```
+
+It is necessary to use `class="not-gallery-item"` for such emojis to prevent them being recognized as normal images.
+
+And I also need to import this file in `themes/icarus/scripts/index.js` by adding the following lines at the end of the original file.
+
+```javascript themes/icarus/scripts/index.js
+/**
+ * Register custom helper functions of emoji
+ */
+require('./emoji')(hexo);
+```
+
+Now, the custom tag on emoji will be registered for hexo!
+When you try to add an emoji in your blog, put them in `sources/emoji/xxx.png`, and insert it in your blog with `{% emoji xxx.png %}`.
+If the image is in `png` format, you can leave the `.png` part and simply use `{% emoji xxx %}`.
+
+This is really convenient, especially for those BBS users who are addicted to adding emojis in their posts, isn't it? {% emoji wow.jpg %}
 
 
 ## Writing Blog
@@ -206,10 +275,9 @@ For more detailed introduction of how Github Action works, refer to [here](https
 
 ## TODO
 
-- [More styles](https://www.imaegoo.com/2020/icarus-with-bulma/)
-- Keep a note of my first CD ripping experience.
-- Upload most of my undergraduate course materials to Github.
-- Planning to add some stickers to my blog. It is worth to try to find a way like pattern matching and replacing to save the time of manually adding stickers in in-line form in my blog.
-- Move my personal note from local onto the blog might be a good choice.
-- Keep a diary, or weekly diary? Something like that might not be a bad choice.
-- No other plans? I think the above plans are enough for a short-term workload, lol.
+- [x] Keep a note of my first CD ripping experience.
+- [ ] Upload most of my undergraduate course materials to Github.
+- [x] Planning to add some stickers to my blog. It is worth to try to find a way like pattern matching and replacing to save the time of manually adding stickers in in-line form in my blog.
+- [ ] Move my personal note from local onto the blog might be a good choice.
+- [ ] Keep a diary, or weekly diary? Something like that might not be a bad choice.
+- [ ] No other plans? I think the above plans are enough for a short-term workload, lol.
